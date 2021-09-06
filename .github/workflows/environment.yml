@@ -3,7 +3,7 @@ name: Enviroment Workflow
 on: push
 env: 
   WF_ENV: Available to all jobs
-  WF_SECRET_ENV: {{ secrets.WF_SECRET_ENV }}
+  WF_SECRET_ENV: ${{ secrets.WF_SECRET_ENV }}
   
   
 jobs: 
