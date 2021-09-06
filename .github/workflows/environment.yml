@@ -3,6 +3,7 @@ name: Enviroment Workflow
 on: push
 env: 
   WF_ENV: Available to all jobs
+  WF_SECRET_ENV: {{ secrets.WF_SECRET_ENV }}
   
   
 jobs: 
@@ -18,6 +19,7 @@ jobs:
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
           echo "STEP_JOB: ${STEP_JOB}"
+          echo "WF_SECRET_ENV: ${WF_SECRET_ENV}"
   log-default-env:
     runs-on: ubuntu-latest
     steps:
