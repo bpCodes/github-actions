@@ -29,4 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
       - name: Log Version after setup node
-        run: node -v
+        run: |
+          node -v
+          echo $IS_UBUNTU_10
