@@ -8,6 +8,11 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
         node_version: [6,8,10]
+        exclude: 
+          - os: ubuntu-latest
+            node_version: 8
+          - os: macos-latest
+            node_version: 10
       fail-fast: true
       # max-parallel: 0
     runs-on: ${{ matrix.os }}
